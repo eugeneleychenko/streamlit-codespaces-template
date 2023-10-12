@@ -1,3 +1,8 @@
-streamlit>=1.26.0
 langchain
 openai
+python-dotenv
+streamlit>=1.8.1
+numpy
+json
+os
+

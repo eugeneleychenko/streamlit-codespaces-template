@@ -1,40 +1,54 @@
 import streamlit as st
+import json
+import difflib
+from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain import PromptTemplate, LLMChain
+import os
 
-# Sidebar for OpenAI API Key input
-st.sidebar.title("OpenAI API Key")
-openai_api_key = st.sidebar.text_input("Enter your OpenAI API Key", type="password")
+load_dotenv()
 
-# Initialize OpenAI with the provided API Key
-if openai_api_key:
-    llm = ChatOpenAI(openai_api_key=openai_api_key, model="gpt-3.5-turbo-16k", temperature=.1)
-else:
-    llm = ChatOpenAI(openai_api_key="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")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
-# Input field for story
-st.title("Story Input")
-story = st.text_area("Write your story here:")
+@st.cache_data
+def load_data(file_name):
+    with open(file_name) as f:
+        data = json.load(f)
+    return data
 
-# Dropdown for reading level selection
-st.title("Select Reading Level")
-reading_level = st.selectbox("Choose the reading level:", ["3rd grade", "8th grade", "college"])
+def get_agenda_items(recipe_name, data):
+    for category, recipes in data.items():
+        for recipe in recipes:
+            if recipe['Recipe'] == recipe_name:
+                return recipe['Agenda Items']
+    return None
 
+def main():
+    tasks_data = load_data('tasks.json')
+    flow_data = load_data('flow.json')
 
+    # Initialize the language model
+    
+    
+    llm = ChatOpenAI(model="gpt-4", temperature=.2, openai_api_key=openai_api_key)
+    st.title("Luma AI")
+    recipe_name = st.text_input('Enter a task')
+    if recipe_name:
+        closest_task = difflib.get_close_matches(recipe_name, tasks_data['tasks'], n=1)
+        if closest_task:
+            similarity = difflib.SequenceMatcher(None, recipe_name, closest_task[0]).ratio()
+            agenda_items = get_agenda_items(closest_task[0], flow_data)
+            if agenda_items:
+                # Create a chain that uses the language model to generate a complete sentence
+                template = "Based on your input, I suggest you to follow these steps: {agenda_items}. This suggestion is based on the recipe '{recipe_name}', which is {similarity}% similar to your input."
+                prompt = PromptTemplate(template=template, input_variables=["agenda_items", "recipe_name", "similarity"])
+                llm_chain = LLMChain(prompt=prompt, llm=llm)
+                response = llm_chain.run({"agenda_items": ', '.join(agenda_items), "recipe_name": closest_task[0], "similarity": round(similarity * 100, 2)})
+                st.write(response)
+            else:
+                st.write('Agenda Items not found for the task')
+        else:
+            st.write('Task not found')
 
-# Define a prompt template for rewriting the story
-template = """
-You are an AI that rewrites stories according to a specified reading level.
-Original Story: {story}
-Reading Level: {reading_level}
-Rewritten Story: """
-prompt_template = PromptTemplate(input_variables=["story", "reading_level"], template=template)
-
-# Create a new LLMChain for rewriting the story
-rewrite_chain = LLMChain(llm=llm, prompt=prompt_template)
-
-# Use the chain to rewrite the story when the Submit button is clicked
-if st.button("Submit"):
-    rewritten_story = rewrite_chain.apply([{"story": story, "reading_level": reading_level}])
-    st.write(f"Rewritten story: {rewritten_story}")
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,196 @@
+{
+    "Human resources": [
+      {
+        "Recipe": "Improve employee onboarding through daily reflection",
+        "Agenda Items": [
+          "Provide tools for reflection using Journaling",
+          "Give the journal structure using Rose, Thorn, Bud"
+        ]
+      },
+      {
+        "Recipe": "Run a great weekly staff meeting",
+        "Agenda Items": [
+          "Provide updates using Rose, Thorn, Bud",
+          "Inspire and teach each other using Alternative Worlds"
+        ]
+      },
+      {
+        "Recipe": "Build empathy within your team",
+        "Agenda Items": [
+          "Visualize the people impacted by your work using Stakeholder Mapping",
+          "Uncover new perspectives using Interviewing"
+        ]
+      },
+      {
+        "Recipe": "Co-create a mission statement for your organization",
+        "Agenda Items": [
+          "Get your bearings using Abstraction Laddering",
+          "Pinpoint essential aspects using Visualize the Vote",
+          "Channel your collective creativity using Round Robin",
+          "Discuss the ideas using Critique",
+          "Come to a consensus using Visualize the Vote"
+        ]
+      },
+      {
+        "Recipe": "Prototype an improvement to a process",
+        "Agenda Items": [
+          "Build a narrative using Storyboarding",
+          "Bring it to life using Video Scenario"
+        ]
+      }
+    ],
+    "Leadership & management": [
+      {
+        "Recipe": "Conduct a short project retrospective",
+        "Agenda Items": [
+          "Surface a team’s opinions about a recent project using Rose, Thorn, Bud",
+          "Reveal patterns and potential areas for improvement using Affinity Clustering"
+        ]
+      },
+      {
+        "Recipe": "Harvest early ideas and get feedback",
+        "Agenda Items": [
+          "Introduce an idea using Concept Poster",
+          "Invite feedback using Rose, Thorn, Bud",
+          "Collect feedback and discuss next steps using Critique"
+        ]
+      },
+      {
+        "Recipe": "Amplify multiple stakeholder voices",
+        "Agenda Items": [
+          "Frame the opportunity using Statement Starters",
+          "Channel your collective creativity using Round Robin",
+          "Envision the future using Cover Story Mock-up",
+          "Collect feedback and discuss next steps using Critique"
+        ]
+      }
+    ],
+    "Business consulting": [
+      {
+        "Recipe": "Find inspiration by seeing a problem through a new lens",
+        "Agenda Items": [
+          "Seek new perspectives using Alternative Worlds",
+          "Get inspired using Statement Starters"
+        ]
+      },
+      {
+        "Recipe": "Identify and agree on the right problems to solve",
+        "Agenda Items": [
+          "Explore an issue using Problem Tree Analysis",
+          "Flag the best options using Visualize the Vote"
+        ]
+      },
+      {
+        "Recipe": "Invite users to help shape the future of a product, service, or process",
+        "Agenda Items": [
+          "Reveal what people are thinking using What’s on Your Radar?",
+          "Invite people into the design process using Build Your Own"
+        ]
+      }
+    ],
+    "Nonprofits & foundations": [
+      {
+        "Recipe": "Help people tell you what they need and value",
+        "Agenda Items": [
+          "Sketch quick concepts using Thumbnail Sketching",
+          "Create conditions for decision making using Buy a Feature"
+        ]
+      },
+      {
+        "Recipe": "Brainstorm many ideas in a short period of time",
+        "Agenda Items": [
+          "Spark new ideas using Creative Matrix",
+          "Get a fresh perspective using Alternative Worlds"
+        ]
+      }
+    ],
+    "Product development": [
+      {
+        "Recipe": "Gain firsthand knowledge of a situation",
+        "Agenda Items": [
+          "Focus on people using Stakeholder Mapping",
+          "Experience it yourself using Walk-a-Mile Immersion",
+          "Prepare opportunity statements using Statement Starters"
+        ]
+      },
+      {
+        "Recipe": "Counter assumptions and define challenges with empathy-driven insights",
+        "Agenda Items": [
+          "Understand the people who might be impacted using Stakeholder Mapping",
+          "Learn more about what is important to people using Interviewing",
+          "Identify what is working well, what isn't, and opportunities for improvement using Rose, Thorn, Bud",
+          "Making sense of research findings and uncover insights using Affinity Clustering"
+        ]
+      },
+      {
+        "Recipe": "Advance an early idea or concept",
+        "Agenda Items": [
+          "Introduce an idea using Concept Poster",
+          "Invite feedback using Rose, Thorn, Bud",
+          "Refine the concept using Storyboarding"
+        ]
+      },
+      {
+        "Recipe": "Prioritize and visualize potential new features for a digital product",
+        "Agenda Items": [
+          "Prioritize features using Bull’s-eye Diagramming",
+          "Create an outline using Schematic Diagramming",
+          "Make things quickly using Rough & Ready Prototyping"
+        ]
+      }
+    ],
+    "Project management": [
+      {
+        "Recipe": "Diffuse tension or disagreement with a coworker",
+        "Agenda Items": [
+          "Structure the conversation using What’s on Your Radar?",
+          "Encourage an open dialogue using Rose, Thorn, Bud"
+        ]
+      },
+      {
+        "Recipe": "Document a conversation with a key stakeholder",
+        "Agenda Items": [
+          "Get a fresh perspective using Interviewing",
+          "Capture the conversation using Concept Mapping"
+        ]
+      }
+    ],
+    "Schools & classrooms": [
+      {
+        "Recipe": "Kick off a student project by talking to experts",
+        "Agenda Items": [
+          "Announce the driving question using Statement Starters",
+          "Ask students to focus on people using Stakeholder Mapping",
+          "Collaboratively prepare interview questions using Affinity Clustering",
+          "Hear directly from experts using Interviewing",
+          "Add new people and connections using Stakeholder Mapping"
+        ]
+      },
+      {
+        "Recipe": "Co-create a driving question for a class project",
+        "Agenda Items": [
+          "Explore the topic using Problem Tree Analysis",
+          "Draft potential challenges using Statement Starters",
+          "Flag the most compelling areas of focus using Visualize the Vote",
+          "Refine the initial set of questions using Statement Starters"
+        ]
+      }
+    ],
+    "Life at home": [
+      {
+        "Recipe": "Prioritize your home improvement projects",
+        "Agenda Items": [
+          "Quickly prioritize projects and tasks using Importance/Difficulty Matrix",
+          "Decide what to work on first using Visualize the Vote"
+        ]
+      },
+      {
+        "Recipe": "Improve your daily experience at work",
+        "Agenda Items": [
+          "Reflect on your daily work using Rose, Thorn, Bud",
+          "Find themes and patterns using Affinity Clustering",
+          "Set your priorities and focus areas using Importance/Difficulty Matrix"
+        ]
+      }
+    ]
+  }
